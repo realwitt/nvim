@@ -1,0 +1,1 @@
+-- Options are automarm.opt.guioptions - "L" -- Remove left scrollbar
