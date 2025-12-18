@@ -19,7 +19,7 @@ return {
     opts = {
       modes = {
         char = {
-          keys = { "f", "F", "t", "T", [";"] = "L", [","] = "H" },
+          keys = { "f", "F", "t", "T", ";", "," },
         },
       },
     },
