@@ -2,6 +2,22 @@ return {
   "folke/snacks.nvim",
   opts = {
     picker = {
+      sources = {
+        scratch = {
+          win = {
+            input = {
+              keys = {
+                ["<C-d>"] = { "scratch_delete", mode = { "i", "n" }, desc = "Delete scratch" },
+              },
+            },
+            list = {
+              keys = {
+                ["<C-d>"] = { "scratch_delete", mode = "n", desc = "Delete scratch" },
+              },
+            },
+          },
+        },
+      },
       win = {
         input = {
           keys = {

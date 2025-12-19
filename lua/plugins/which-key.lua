@@ -14,6 +14,7 @@ return {
       -- Picker window navigation
       { "<C-h>", desc = "Window left / Focus list", mode = { "n", "i" } },
       { "<C-l>", desc = "Window right / Focus preview", mode = { "n", "i" } },
+      { "<C-d>", desc = "Delete scratch buffer", mode = { "n", "i" } },
     },
   },
 }
