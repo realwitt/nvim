@@ -1,0 +1,53 @@
+[sqlfluff]
+dialect = postgres
+templater = raw
+# LT02 excluded: sqlfluff's postgres dialect lacks proper clause segments for
+# CREATE POLICY, so it flattens FOR/USING indentation. Excluding preserves manual formatting.
+exclude_rules = ambiguous.column_count, structure.column_order, layout.indent
+max_line_length = 120
+processes = -1
+
+[sqlfluff:indentation]
+indent_unit = space
+tab_space_size = 4
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.types]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:convention.not_equal]
+preferred_not_equal_style = c_style
+
+[sqlfluff:layout:type:comma]
+line_position = trailing
+
+[sqlfluff:layout:type:column]
+spacing_before = align
+align_scope = file
+align_within = statement
+
+[sqlfluff:layout:type:column_definition]
+spacing_before = align
+align_scope = file
+align_within = statement
+
+[sqlfluff:layout:type:column_constraint_segment]
+spacing_before = align
+align_scope = file
+align_within = statement
+
+[sqlfluff:layout:type:data_type]
+spacing_before = align
+align_scope = file
+align_within = statement
